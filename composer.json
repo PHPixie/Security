@@ -15,7 +15,7 @@
     "require": {
         "phpixie/slice": "3.*@dev",
         "phpixie/database": "3.*@dev",
-        "paragonie/random_compat":"0.*",
+        "paragonie/random_compat":"^1.0",
         "ircmaxell/password-compat":"1.*"
     },
     "require-dev": {
