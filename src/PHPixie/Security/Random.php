@@ -4,13 +4,14 @@ namespace PHPixie\Security;
 
 class Random
 {
-    public function string($length)
+    public function string($length, $alphabet='0123456789abcdef')
     {
-        $bytesLength = (int) ceil($length/2);
-        $bytes = $this->bytes($bytesLength);
-        $string = bin2hex($bytes);
-        return substr($string, 0, $length);
-        
+        $buf = '';
+        $l = strlen($alphabet) - 1;
+        for ($i = 0; $i < $length; ++$i) {
+            $buf .= $alphabet[random_int(0, $l)];
+        }
+        return $buf;
     }
     
     public function bytes($length)
