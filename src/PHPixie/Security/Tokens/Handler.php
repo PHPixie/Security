@@ -97,7 +97,7 @@ class Handler
     
     protected function challenge($series, $passphrase)
     {
-        return md5($series.$passphrase);
+        return sha1($series.$passphrase);
     }
     
     protected function encodeToken($series, $passphrase)

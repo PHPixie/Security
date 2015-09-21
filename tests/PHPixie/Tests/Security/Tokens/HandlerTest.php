@@ -172,7 +172,7 @@ class HandlerTest extends \PHPixie\Test\Testcase
     
     protected function challenge($series, $passphrase)
     {
-        return md5($series.$passphrase);
+        return sha1($series.$passphrase);
     }
     
     protected function token($properties = array())
